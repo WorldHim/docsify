@@ -26,6 +26,8 @@
   <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
   <!-- 文档分页化 -->
   <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <!-- 文档选项卡 -->
+  <script src="https://cdn.jsdelivr.net/npm/docsify-tabs"></script>
   <!-- Wiki 链接支持 -->
   <script src="https://cdn.jsdelivr.net/npm/docsify-wikilink"></script>
   <!-- 自定义页面标题 -->
@@ -36,6 +38,8 @@
   <!-- 侧边栏折叠 -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+  <!-- 搜索 -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
   <!-- 主题 -->
 
   <!-- Theme: Simple -->
@@ -78,7 +82,7 @@
         '/.*/_sidebar.md': '/_sidebar.md',
       },
       hideSidebar: false,
-      subMaxLevel: 3,
+      subMaxLevel: 4,
       idebarDisplayLevel: 1,
       auto2top: true,
       homepage: 'README.md',
@@ -106,6 +110,13 @@
           '/es/'   : 'Copiado',
           '/'      : 'Copied'
         }
+      },
+      tabs: {
+        persist: true,
+        sync: true,
+        theme: 'classic',
+        tabComments: true,
+        tabHeadings: true
       },
       plugins: [
         EditOnGithubPlugin.create(
